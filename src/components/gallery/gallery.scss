@@ -1,0 +1,21 @@
+.gallery {
+    padding: 40px 40px 24px 40px;
+    text-align: center;
+
+    &__collage {
+        display: grid;
+        grid-template-columns: 250px 250px 250px 250px;
+        justify-content: center;
+        gap: 40px;
+
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    p {
+        padding: 20px;
+        font-size: 25px;
+        color: #747474;
+    }
+}

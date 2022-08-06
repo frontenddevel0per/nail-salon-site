@@ -1,0 +1,84 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0px 16px 16px;
+
+    background: #807EE3;
+
+    &__main {
+        padding-left: 10em;
+        max-width: 500px;
+
+        &-nav {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+
+            font-size: 20px;
+            line-height: 24px;
+
+            li {
+                padding-right: 1.5em;
+                border-right: 1px solid black;
+            }
+
+            :last-child {
+                border-right: none;
+            }
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: 800;
+            line-height: 84px;
+        }
+
+        h3 {
+            text-align: left;
+            padding-left: 48px;
+
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+        }
+
+        &-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            gap: 16px;
+            padding-left: 48px;
+
+            a {
+                width: 303px;
+
+                button {
+                    width: 303px;
+                    height: 62px;
+                    background: linear-gradient(238.59deg, #5FD3FF -18.96%, rgba(99, 214, 255, 0) 54.42%), linear-gradient(96.53deg, #FFAE88 -3.19%, #8F93EA 105.27%);
+                    border: none;
+                    border-radius: 17px;
+                    text-align: center;
+    
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    &__images {
+        &-logo {
+            position: absolute;
+            top: 0px;
+            right: 30px;
+            width: 288px;
+            height: 288px;
+        }
+
+        &-art {
+            width: 100%;
+            padding-top: 10em;
+        }
+    }
+}
