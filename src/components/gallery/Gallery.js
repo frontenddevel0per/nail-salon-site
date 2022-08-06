@@ -23,7 +23,7 @@ const Gallery = () => {
                 <img src={gallery7} alt="gallery7" />
                 <img src={gallery8} alt="gallery8" />
             </div>
-            <p>Показать ещё</p>
+            <button>Показать ещё</button>
         </div>
     )
 }
