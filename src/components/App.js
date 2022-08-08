@@ -3,6 +3,7 @@ import Services from './services/Services';
 import Gallery from './gallery/Gallery';
 import Contacts from './contacts/Contacts';
 import Footer from './footer/Footer';
+import ModalWindow from './modalWindow/ModalWindow';
 
 import './App.scss';
 
@@ -14,6 +15,7 @@ function App() {
       <Gallery/>
       <Contacts/>
       <Footer/>
+      <ModalWindow/>
     </div>
   );
 }

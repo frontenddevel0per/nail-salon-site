@@ -1,3 +1,7 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { modalActive } from '../../actions';
+
 import './services.scss';
 
 import left_img from '../../resources/img/services-left.png';
@@ -7,6 +11,12 @@ import right_img from '../../resources/img/services-right.png';
 // import DB from '../../resources/DB/prices.json';
 
 const Services = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        const el = document.querySelector('#modalWindow');
+        console.log(el);
+    }, [])
 
     return (
         <div className="services" id="services">
@@ -51,7 +61,7 @@ const Services = () => {
                                 <h3>3000 ₽</h3>
                             </div>
                         </div>
-                        <button>Записаться</button>
+                        <button onClick={() => dispatch(modalActive())}>Записаться</button>
                     </div>
                     <div className="services__main-container-part">
                         <h2>Педикюр</h2>
@@ -73,7 +83,7 @@ const Services = () => {
                                 <p>*Снятие с последующим покрытием - бесплатно</p>
                             </div>
                         </div>
-                        <button>Записаться</button>
+                        <button onClick={() => dispatch(modalActive())}>Записаться</button>
                     </div>
                     <div className="services__main-container-part">
                         <h2>Брови</h2>
@@ -103,7 +113,7 @@ const Services = () => {
                                 <h3>1400 ₽</h3>
                             </div>
                         </div>
-                        <button>Записаться</button>
+                        <button onClick={() => dispatch(modalActive())}>Записаться</button>
                     </div>
                 </div>
             </div>

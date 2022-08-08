@@ -1,0 +1,15 @@
+.modalWindow {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.active {
+    display: block;
+    z-index: 5;
+    transition: 1s cubic-bezier(0.2, 1);
+}
