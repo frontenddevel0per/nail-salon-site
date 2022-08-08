@@ -20,6 +20,26 @@
             li {
                 padding-right: 1.5em;
                 border-right: 1px solid black;
+                -moz-user-select: none;
+                -khtml-user-select: none;
+                user-select: none;   
+
+                a {
+                    color: #000;
+                    margin: 0;
+                    padding-bottom: 2px;
+                    display: inline-block;
+                    text-decoration: none;
+                }::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background: linear-gradient(238.59deg, #5FD3FF -18.96%, rgba(99, 214, 255, 0) 54.42%), linear-gradient(96.53deg, #FFAE88 -3.19%, #8F93EA 105.27%);
+                    transition: width .3s;
+                }:hover::after {
+                    width: 100%;
+                }
             }
 
             :last-child {

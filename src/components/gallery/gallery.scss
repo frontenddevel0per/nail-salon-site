@@ -19,5 +19,11 @@
         border: none;
         background-color: inherit;
         color: #747474;
+    }:hover {
+        color: #AAA;
+        transition: 0.25s all ease;
+    }:active {
+        color: #525252;
+        transition: cubic-bezier(1, 0, 0, 1) 0.25s all ease;
     }
 }

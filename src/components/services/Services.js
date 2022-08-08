@@ -9,7 +9,7 @@ import right_img from '../../resources/img/services-right.png';
 const Services = () => {
 
     return (
-        <div className="services">
+        <div className="services" id="services">
             <div className="services__header">
                 <div className="services__header-part">
                     <img src={left_img} alt="leftimg" />

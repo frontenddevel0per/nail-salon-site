@@ -1,3 +1,5 @@
+import { Link, animateScroll as scroll } from "react-scroll";
+
 import './header.scss';
 
 import logo from '../../resources/img/logo.png';
@@ -8,9 +10,36 @@ const Header = () => {
         <div className="header">
             <div className="header__main">
                 <ul className="header__main-nav">
-                    <li>Услуги</li>
-                    <li>Галерея</li>
-                    <li>Контакты</li>
+                    <li>
+                        <Link 
+                            to="services"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={700}>
+                                Услуги
+                        </Link>
+                    </li>
+                    <li>
+                        <Link 
+                            to="gallery"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={700}>
+                                Галерея
+                        </Link>
+                    </li>
+                    <li>
+                        <Link 
+                            to="contacts"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={700}>
+                                Контакты
+                        </Link>
+                    </li>
                 </ul>
                 <h1>_MANICUTE_</h1>
                 <h3>Студия неординарных ногтей,<br/>услуги бровиста в Москве и<br/>Санкт-Петербурге</h3>

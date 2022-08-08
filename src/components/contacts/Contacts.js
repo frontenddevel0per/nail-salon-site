@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './contacts.scss';
 
 import tgicon from '../../resources/img/tg-icon.png';
@@ -6,16 +7,21 @@ import whatsappicon from '../../resources/img/whatsapp-icon.png';
 import vkicon from '../../resources/img/vk-icon.png';
 
 const Contacts = () => {
+    const [activeMap, setActiveMap] = useState("spb");
+    const map = (activeMap === "spb") ? <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7f14a301e121451c450945c4dc75847b6fcefedacdfdd4f59c4decd6308ce279&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
+    : <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8548a9ac2b91e766c9ea5c2a693b8e2bd4dfbe80847319c865b9c81e838316a&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe> ;
+    const address = (activeMap === "spb") ? "Санкт-Петербург, Невский проспект, 108В" : "Москва, ул.Шарикоподшипниковская, 22";
+
     return (
-        <div className="contacts">
+        <div className="contacts" id="contacts">
             <div className="contacts__header">
-                <button className="active">СПб</button>
-                <button>Мск</button>
+                <button className={(activeMap === "spb") ? "active" : null} onClick={() => setActiveMap("spb")}>СПб</button>
+                <button className={(activeMap === "msk") ? "active" : null} onClick={() => setActiveMap("msk")}>Мск</button>
             </div>
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7f14a301e121451c450945c4dc75847b6fcefedacdfdd4f59c4decd6308ce279&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
+            {map}
             <div className="contacts__mapinfo">
                 <h1>_ManiCute_</h1>
-                <p>Санкт-Петербург, Невский проспект, 108В<br/>Пн-Вс, с 9:00 до 21:00</p>
+                <p>{address}<br/>Пн-Вс, с 9:00 до 21:00</p>
                 <div className="contacts__mapinfo-icons">
                     <a href="https://telegram.com">
                         <img src={tgicon} alt="tg-icon"/>
