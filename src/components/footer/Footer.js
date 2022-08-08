@@ -1,3 +1,5 @@
+import { Link, animateScroll as scroll } from "react-scroll";
+
 import './footer.scss';
 
 import logo from '../../resources/img/logo.png';
@@ -30,9 +32,36 @@ const Footer = () => {
                 </div>
                 <div className="footer__main-part">
                     <h3>Главная</h3>
-                    <p>Прайс</p>
-                    <p>Галерея</p>
-                    <p>Контакты</p>
+                    <p>
+                        <Link 
+                            to="services"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={700}>
+                                Прайс
+                        </Link>
+                    </p>
+                    <p>
+                        <Link 
+                            to="gallery"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={700}>
+                                Услуги
+                        </Link>
+                    </p>
+                    <p>
+                        <Link 
+                            to="contacts"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={700}>
+                                Контакты
+                        </Link>
+                    </p>
                 </div>
                 <div className="footer__main-part">
                     <h3>Помощь</h3>

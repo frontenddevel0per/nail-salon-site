@@ -24,6 +24,9 @@
             p {
                 line-height: 12px;
                 margin: 8px 0;
+                -moz-user-select: none;
+                -khtml-user-select: none;
+                user-select: none;   
             }
 
             &-socials {
